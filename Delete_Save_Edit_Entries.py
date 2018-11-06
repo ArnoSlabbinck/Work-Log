@@ -35,7 +35,7 @@ def save_entry(task, time_spent, date, comments):
     """Saves the user's entries """
     Menu_Work_log.clear_screen() 
 
-    with open('work_log.csv', 'w', newline='') as csvfile: # Make a CSV file folder 
+    with open('work_log.csv', 'a', newline='') as csvfile: # Make a CSV file folder 
         entry_fieldnames = ['Task name', 'Time spent', 'Date', 'Comments']
         filewriter = csv.DictWriter(csvfile, fieldnames=entry_fieldnames)
         filewriter.writerow({
